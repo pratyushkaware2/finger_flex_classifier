@@ -98,11 +98,11 @@ def test_model(df, model, ROC = False):
                                            scores['test_accuracy'].std() * 2))
     print(">>>Misclassification Rate: %0.2f (+/- %0.2f)"% (1 - scores['test_accuracy'].mean(),
                                                         scores['test_accuracy'].std()*2))
-    print(">>>F1_score: %0.2f (+/- %0.2f)" % (1 - scores['test_f1_macro'].mean(),
+    print(">>>F1_score: %0.2f (+/- %0.2f)" % (scores['test_f1_macro'].mean(),
                                            scores['test_f1_macro'].std()*2))
-    print(">>>Precision: %0.2f (+/- %0.2f)" % (1 - scores['test_precision_macro'].mean(),
+    print(">>>Precision: %0.2f (+/- %0.2f)" % (scores['test_precision_macro'].mean(),
                                            scores['test_precision_macro'].std()*2))
-    print(">>>Recall: %0.2f (+/- %0.2f)" % (1 - scores['test_recall_macro'].mean(),
+    print(">>>Recall: %0.2f (+/- %0.2f)" % (scores['test_recall_macro'].mean(),
                                            scores['test_recall_macro'].std()*2))
     CM = confusion_matrix(lb.inverse_transform(Y_test), lb.inverse_transform(Y_pred))
     print(">>>Confusion Matrix:")
