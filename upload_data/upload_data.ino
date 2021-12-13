@@ -23,8 +23,8 @@
 // Set these to run example.
 #define FIREBASE_HOST "flex-sensor-readings.firebaseio.com"
 #define FIREBASE_AUTH "1QqTI1m7MkccIeRBRNmwwnN4rfl95d1ExkxiY9Va"
-#define WIFI_SSID "manojk"
-#define WIFI_PASSWORD "nehamanoj@502"
+#define WIFI_SSID "*******"
+#define WIFI_PASSWORD "*******"
 
 int sensorPin = A0;    // select the input pin for the potentiometer
 int ledPin = 16;      // select the pin for the LED pull
